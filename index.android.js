@@ -1,7 +1,8 @@
 //import libraries to create components
 import React  from 'react';
 import {
-  AppRegistry
+  AppRegistry,
+  View
 } from 'react-native';
 
 //component nesting
@@ -10,11 +11,15 @@ import {
 //all node packages are unique
 //when importing from a file we generated, need to nomiate path
 import Header from './src/components/header';
+import AlbumList from './src/components/AlbumList';
 
 
 //create compontent
 const App = () => (
-    <Header />
+  <View>
+    <Header headerText = { 'Albums--'} blaText = { 'blaValue'} />
+    <AlbumList />
+  </View>
 );
 
 //render component to screen

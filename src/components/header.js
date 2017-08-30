@@ -2,14 +2,15 @@
 import React  from 'react';
 import { Text, View } from 'react-native';
 //make a components
-const Header = () => {
+const Header = (props) => {
     const { textStyle, viewStyle } = styles;
     //destructuring used on styles.
     //if not using destructuring then
     //<View style={styles.viewStyle}>
     return (
       <View style={viewStyle}>
-        <Text style={textStyle}>Albums!</Text>
+        <Text style={textStyle}>{props.headerText}</Text>
+        <Text style={textStyle}>{props.blaText}</Text>
       </View>
     );
 };
@@ -19,7 +20,7 @@ const styles = {
     backgroundColor: 'yellow',
     justifyContent: 'center',
     alignItems: 'center',
-    height: 60,
+    height: 90,
     paddingTop: 15,
     shadowColor: 'orange',
     shadowOffset: { width: 0, height: 20 },
@@ -28,7 +29,7 @@ const styles = {
     position: 'relative',
   },
   textStyle: {
-    fontSize: 40
+    fontSize: 20
   }
 };
 
