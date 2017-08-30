@@ -6,6 +6,14 @@ import { Text, View } from 'react-native';
 //replace previous functional component with class component
 //render method returns valid JSX
 class AlbumList extends Component {
+
+  /*
+  *   when component is about to be rendered to screen
+  *   componentWillMount is executed.
+  */
+  componentWillMount() {
+    console.log("componentWillMount in AlbumList")
+  }
   render() {
     return (
       <View>
@@ -24,6 +32,6 @@ export default AlbumList;
 /*
 *   functional component
 *   class component
-*
+*   class component have lifecycle
 *
 */
