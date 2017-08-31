@@ -12,14 +12,18 @@ class AlbumList extends Component {
   *   componentWillMount is executed.
   */
   componentWillMount() {
-    console.log("componentWillMount in AlbumList")
+    console.log('componentWillMount in AlbumList - start');
+    fetch('https://rallycoding.herokuapp.com/api/music_albums')
+      .then((response) => response.json())
+      .then((response) => console.log(response));
+      //.then((response) => response.json())
+      //.then((responseData) => this.setState({ albums: responseData }));
+    console.log('componentWillMount in AlbumList - end');
   }
   render() {
     return (
       <View>
         <Text>Album List</Text>
-        <Text>222!-------</Text>
-        <Text>333-------</Text>
       </View>
     );
   }
