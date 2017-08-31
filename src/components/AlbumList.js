@@ -30,8 +30,16 @@ class AlbumList extends Component {
     console.log('componentWillMount in AlbumList - end');
   }
 
+  /*
+  *   to prevent unique key error when rendering elements
+  *   Warning: Each child in an array or iterator should have a unique "key" prop.
+  *   add unique key to the repeated content
+  *   ie:   <Text key={album.title}>{album.title}</Text>);
+  *   NB: in this case title column is unique, usually look for id column.
+  */
   renderAlbums() {
-    return this.state.albums.map(album => <Text>{album.title}</Text>);
+    return this.state.albums.map(album =>
+      <Text key={album.title}>{album.title}</Text>);
   }
 
   render() {
