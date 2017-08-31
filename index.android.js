@@ -17,7 +17,7 @@ import AlbumList from './src/components/AlbumList';
 //create compontent
 const App = () => (
   <View>
-    <Header headerText = { 'Albums--'} blaText = { 'blaValue'} />
+    <Header headerText={'Albums'} />
     <AlbumList />
   </View>
 );

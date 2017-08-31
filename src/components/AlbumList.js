@@ -1,6 +1,8 @@
 //import libraries for making a components
 import React, { Component } from 'react';
 import { Text, View } from 'react-native';
+import AlbumDetail from './AlbumDetail';
+
 
 //const AlbumList = () => {
 //replace previous functional component with class component
@@ -36,10 +38,15 @@ class AlbumList extends Component {
   *   add unique key to the repeated content
   *   ie:   <Text key={album.title}>{album.title}</Text>);
   *   NB: in this case title column is unique, usually look for id column.
+  *
+  *   ch38: need to pass data from parent to child - use props
+  *   nb: have used album = {album} but could be xxx = {album}
+  *   ie: the name of the variable 'xxx' does not have to = name of the prop.
   */
   renderAlbums() {
     return this.state.albums.map(album =>
-      <Text key={album.title}>{album.title}</Text>);
+      <AlbumDetail key={album.title} album={album} />
+    );
   }
 
   render() {
