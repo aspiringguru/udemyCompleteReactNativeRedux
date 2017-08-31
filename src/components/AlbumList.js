@@ -1,5 +1,5 @@
 //import libraries for making a components
-import React, { Component }  from 'react';
+import React, { Component } from 'react';
 import { Text, View } from 'react-native';
 
 //const AlbumList = () => {
@@ -20,8 +20,8 @@ class AlbumList extends Component {
   componentWillMount() {
     console.log('componentWillMount in AlbumList - start');
     fetch('https://rallycoding.herokuapp.com/api/music_albums')
-      .then((response) => response.json())
-      .then((response) => this.setState({ albums: response }));
+      .then(response => response.json())
+      .then(response => this.setState({ albums: response }));
       //.then((response) => this.setState({ albums: response.data }));//this gave errors.
       //.then((response) => console.log(response));
       //  nb: pass in object {albums: response.data}
