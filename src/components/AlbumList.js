@@ -29,12 +29,18 @@ class AlbumList extends Component {
       //
     console.log('componentWillMount in AlbumList - end');
   }
+
+  renderAlbums() {
+    return this.state.albums.map(album => <Text>{album.title}</Text>);
+  }
+
   render() {
     console.log(this.state);
     console.log(typeof this.state);
     return (
       <View>
         <Text>Album List</Text>
+        {this.renderAlbums()}
       </View>
     );
   }
