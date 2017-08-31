@@ -1,6 +1,11 @@
 import React from 'react';
 import { View } from 'react-native';
 
+/*
+*
+* make this a functional componentaa
+* nb: CardSection borderbottomWidth = 1 while Card borderbottomWidth = 0
+*/
 const CardSection = (props) => {
   return (
     <View style={styles.containerStyle}>
