@@ -1,6 +1,6 @@
 //import libraries for making a components
 import React, { Component } from 'react';
-import { Text, View } from 'react-native';
+import { Text, ScrollView } from 'react-native';
 import AlbumDetail from './AlbumDetail';
 
 
@@ -55,10 +55,10 @@ class AlbumList extends Component {
     console.log(this.state);
     console.log(typeof this.state);
     return (
-      <View>
+      <ScrollView>
         <Text>Album List</Text>
         {this.renderAlbums()}
-      </View>
+      </ScrollView>
     );
   }
 }

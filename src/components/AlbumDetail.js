@@ -14,6 +14,7 @@ import CardSection from './CardSection';
 *   to become <Text>{album.title}</Text>
 *   NB: styles.thumbnailStyle required to pass height & width for image
 *   destructuring : ie const { a,b,c } = styles replaces styles.a, styles.b etc.
+*   nb: trick in style.imageStyle set width to null to use 100% width.
 */
 const AlbumDetail = ({album}) => {
   const { title, artist, thumbnail_image, image } = album;
