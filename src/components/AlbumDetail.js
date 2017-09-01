@@ -12,20 +12,21 @@ import CardSection from './CardSection';
 *   changed to const AlbumDetail = ({ album }) =>
 *   which enables <Text>{props.album.title}</Text>
 *   to become <Text>{album.title}</Text>
-*
+*   NB: styles.thumbnailStyle required to pass height & width for image
 */
 const AlbumDetail = ({album}) => {
   const { title, artist, thumbnail_image } = album;
+  const { thumbnailStyle, headerContentStyle } = styles;
   return (
     <Card>
       <CardSection>
         <View>
           <Image
-            style={styles.thumbnailStyle}
+            style={thumbnailStyle}
             source={{ uri: thumbnail_image }}
           />
         </View>
-        <View style={styles.headerContentStyle}>
+        <View style={headerContentStyle}>
           <Text>{title}</Text>
           <Text>{artist}</Text>
         </View>
