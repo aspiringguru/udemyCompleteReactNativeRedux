@@ -10,13 +10,14 @@ import {
 //if importing from node package, do not need to nominate path.
 //all node packages are unique
 //when importing from a file we generated, need to nomiate path
+// style={{flex: 1 }} added to enable scrollview, works without anyway.
 import Header from './src/components/header';
 import AlbumList from './src/components/AlbumList';
 
 
 //create compontent
 const App = () => (
-  <View>
+  <View style={{flex: 1 }}>
     <Header headerText={'Albums'} />
     <AlbumList />
   </View>
