@@ -7,27 +7,27 @@ import CardSection from './CardSection';
 *   consume the prop passed to this
 *   ch41: Card replaces View in previous version.
 *   transfer props to Card
-*   TODO
+*
 *   nb: const AlbumDetail = (props) =>
 *   changed to const AlbumDetail = ({ album }) =>
 *   which enables <Text>{props.album.title}</Text>
 *   to become <Text>{album.title}</Text>
 *
 */
-const AlbumDetail = ( props ) => {
-//  const { title, artist, thumbnail_image } = album;
+const AlbumDetail = ({album}) => {
+  const { title, artist, thumbnail_image } = album;
   return (
     <Card>
       <CardSection>
         <View>
           <Image
             style={styles.thumbnailStyle}
-            source={{ uri: props.album.thumbnail_image }}
+            source={{ uri: thumbnail_image }}
           />
         </View>
         <View style={styles.headerContentStyle}>
-          <Text>{props.album.title}</Text>
-          <Text>{props.album.artist}</Text>
+          <Text>{title}</Text>
+          <Text>{artist}</Text>
         </View>
       </CardSection>
     </Card>
