@@ -16,7 +16,7 @@ import CardSection from './CardSection';
 *   destructuring : ie const { a,b,c } = styles replaces styles.a, styles.b etc.
 */
 const AlbumDetail = ({album}) => {
-  const { title, artist, thumbnail_image } = album;
+  const { title, artist, thumbnail_image, image } = album;
   const {
     headerTextStyle,
     thumbnailStyle,
@@ -37,6 +37,12 @@ const AlbumDetail = ({album}) => {
           <Text style={headerTextStyle}>{title}</Text>
           <Text>{artist}</Text>
         </View>
+      </CardSection>
+      <CardSection>
+        <Image
+          style={imageStyle}
+          source={{ uri: image }}
+        />
       </CardSection>
     </Card>
   );
