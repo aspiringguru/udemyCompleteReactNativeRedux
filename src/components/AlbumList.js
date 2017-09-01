@@ -21,7 +21,9 @@ class AlbumList extends Component {
   */
   componentWillMount() {
     console.log('componentWillMount in AlbumList - start');
-    fetch('https://rallycoding.herokuapp.com/api/music_albums')
+    //fetch('https://rallycoding.herokuapp.com/api/music_albums')
+    //moved to github.
+    fetch('https://raw.githubusercontent.com/aspiringguru/udemyCompleteReactNativeRedux/master/music_albums')
       .then(response => response.json())
       .then(response => this.setState({ albums: response }));
       //.then((response) => this.setState({ albums: response.data }));//this gave errors.
