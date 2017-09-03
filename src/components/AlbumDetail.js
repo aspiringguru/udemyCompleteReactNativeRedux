@@ -16,6 +16,9 @@ import Button from './Button';
 *   NB: styles.thumbnailStyle required to pass height & width for image
 *   destructuring : ie const { a,b,c } = styles replaces styles.a, styles.b etc.
 *   nb: trick in style.imageStyle set width to null to use 100% width.
+*
+*   <Button onPress={() => console.log(title)} />
+*   
 */
 const AlbumDetail = ({album}) => {
   const { title, artist, thumbnail_image, image } = album;
@@ -47,7 +50,7 @@ const AlbumDetail = ({album}) => {
         />
       </CardSection>
       <CardSection>
-        <Button />
+        <Button onPress={() => console.log(title)} />
       </CardSection>
     </Card>
   );
