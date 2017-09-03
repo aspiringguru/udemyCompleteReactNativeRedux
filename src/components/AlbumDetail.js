@@ -22,6 +22,11 @@ import Button from './Button';
 *   add Linking to import from 'react-native'
 *   add url to const album
 *
+*    reusable button format
+*           <Button onPress={() => Linking.openURL(url)}>
+*              Buy Now!!
+*           </Button>
+*
 */
 const AlbumDetail = ({ album }) => {
   const { title, artist, thumbnail_image, image, url } = album;
