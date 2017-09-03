@@ -16,12 +16,12 @@ import { Text, TouchableOpacity } from 'react-native';
 *   nbb: changed from onPress={() => console.log("blad"))}
 *   to onPress={onPress}
 */
-const Button = ({ onPress }) => {
+const Button = ({ onPress, text }) => {
   const { buttonStyle, textStyle } = styles;
   return (
     <TouchableOpacity onPress={onPress} style={buttonStyle}>
       <Text style={textStyle}>
-        Click me!!!
+        {text}
       </Text>
     </TouchableOpacity>
   );
