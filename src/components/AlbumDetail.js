@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, Image } from 'react-native';
+import { Text, View, Image, Linking, } from 'react-native';
 import Card from './Card';
 import CardSection from './CardSection';
 import Button from './Button';
@@ -18,10 +18,13 @@ import Button from './Button';
 *   nb: trick in style.imageStyle set width to null to use 100% width.
 *
 *   <Button onPress={() => console.log(title)} />
-*   
+*   replaced by call to open link.
+*   add Linking to import from 'react-native'
+*   add url to const album
+*
 */
-const AlbumDetail = ({album}) => {
-  const { title, artist, thumbnail_image, image } = album;
+const AlbumDetail = ({ album }) => {
+  const { title, artist, thumbnail_image, image, url } = album;
   const {
     headerTextStyle,
     thumbnailStyle,
@@ -50,7 +53,7 @@ const AlbumDetail = ({album}) => {
         />
       </CardSection>
       <CardSection>
-        <Button onPress={() => console.log(title)} />
+        <Button onPress={() => Linking.openURL(url)} />
       </CardSection>
     </Card>
   );
