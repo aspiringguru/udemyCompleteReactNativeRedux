@@ -1,3 +1,9 @@
+udemy course
+https://www.udemy.com/the-complete-react-native-and-redux-course
+
+authors github
+https://github.com/StephenGrider/ReactNativeReduxCasts
+
 
 #setup for atom. nb: this is local to project, not global
 npm install --save-dev eslint-config-rallycoding

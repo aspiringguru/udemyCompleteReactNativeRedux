@@ -3,7 +3,8 @@
 *   https://facebook.github.io/react-native/docs/touchablenativefeedback.html
 *   https://facebook.github.io/react-native/docs/touchableopacity.html
 *   https://facebook.github.io/react-native/docs/touchablewithoutfeedback.html
-*
+*   onPress={() => console.log('pressed')}
+*   https://facebook.github.io/react-native/docs/handling-touches.html
 */
 import React from 'react';
 import { Text, TouchableOpacity } from 'react-native';
@@ -11,7 +12,7 @@ import { Text, TouchableOpacity } from 'react-native';
 const Button = () => {
   const { buttonStyle, textStyle } = styles;
   return (
-    <TouchableOpacity style={buttonStyle}>
+    <TouchableOpacity onPress={() => console.log('pressed')} style={buttonStyle}>
       <Text style={textStyle}>
         Click me!!!
       </Text>
